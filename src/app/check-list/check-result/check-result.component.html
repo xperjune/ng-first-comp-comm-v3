@@ -1,0 +1,8 @@
+<h3>Check Result!</h3>
+<ul>
+    <li *ngFor="let item of checkedList">
+        {{item.content}}
+        <button (click)="onRemove(item)">X</button>
+    </li>
+</ul>
+<app-check-graph></app-check-graph>

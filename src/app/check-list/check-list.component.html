@@ -1,0 +1,16 @@
+<h2>Check List!</h2>
+
+<p>
+    <button (click)="onChangeCnt('+')">+</button>
+    <button (click)="onChangeCnt('-')">-</button>
+</p>
+
+<span *ngFor="let item of checkList">
+    <label for="ck-{{item.idx}}">{{item.content}}</label>
+    <input type="checkbox" id="ck-{{item.idx}}"
+        [checked]="item.isChecked"
+        (ngModelChange)="onChecked(item)"
+        [(ngModel)]="item.isChecked">
+</span>
+
+<app-check-result></app-check-result>
